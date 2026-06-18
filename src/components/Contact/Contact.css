@@ -30,12 +30,11 @@
 .contact-container {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  padding: 4rem 6vw;
   display: grid;
   grid-template-columns: 0.382fr 0.618fr;
-  height: 100vh;
-  padding: 4rem;
   gap: 4rem;
   pointer-events: none;
 }
