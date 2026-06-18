@@ -1,8 +1,29 @@
-import { useState, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import quotes from '../../quotes.json';
 import './Home.css';
 
 const Home = () => {
   const [hoveredCell, setHoveredCell] = useState(null);
+  const [quote, setQuote] = useState('');
+  const [displayedQuote, setDisplayedQuote] = useState('');
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const selected = quotes[randomIndex];
+    setQuote(selected);
+    setDisplayedQuote('');
+  }, []);
+
+  useEffect(() => {
+    if (!quote) return;
+    let i = 0;
+    const timer = setInterval(() => {
+      i++;
+      setDisplayedQuote(quote.slice(0, i));
+      if (i >= quote.length) clearInterval(timer);
+    }, 40);
+    return () => clearInterval(timer);
+  }, [quote]);
 
   const grade = useMemo(() => {
     const now = new Date();
@@ -65,6 +86,7 @@ const Home = () => {
         <h2 className="home-name">Hongbro886</h2>
       </div>
       <div className="home-right">
+        <p className="home-quote">{displayedQuote}</p>
         <ul className="home-intro">
           <li>一名{grade}的学生</li>
           <li>江苏 苏州</li>

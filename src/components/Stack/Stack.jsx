@@ -2,10 +2,12 @@ import { useState } from 'react';
 import './Stack.css';
 
 const stackData = [
-  { category: 'Languages', items: ['C++', 'Python', 'Dart', 'Swift', 'JavaScript'] },
-  { category: 'Framework', items: ['React', 'Flutter', 'Vite'] },
-  { category: 'Tools', items: ['Git', 'Linux', 'VS Code', 'Neovim'] },
-  { category: 'Interest', items: ['Algorithm', 'OI', 'Open Source', 'Railway', 'Geography'] },
+  { category: '语言', items: ['C++', 'Python', 'Swift' ] },
+  { category: '框架', items: ['Fluent','Flet'] },
+  { category: '工具', items: ['Git', 'Linux', 'VS Code','OpenCode','macOS'] },
+  { category: '感兴趣/正在学习中的', items: ['Dart'] },
+  { category: '设备',items:['MacBook Air M4']},
+  { category: '沟通交流/团队协作',items:['飞书','QQ']}
 ];
 
 const Stack = () => {
