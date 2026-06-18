@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import callMeData from '../../CallMe.json';
-import './About.css';
+import './Contact.css';
 
-const About = () => {
+const Contact = () => {
   const [hoveredCell, setHoveredCell] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -25,16 +25,16 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="about-section">
+    <section id="contact" className="contact-section">
       <div className="grid-background">
         {cells}
       </div>
-      <div className="about-container">
-        <div className="about-left">
-          <span className="about-label">/ About</span>
-          <h2 className="about-title">关于</h2>
+      <div className="contact-container">
+        <div className="contact-left">
+          <span className="contact-label">/ Contact</span>
+          <h2 className="contact-title">联系我</h2>
         </div>
-        <div className="about-right"></div>
+        <div className="contact-right"></div>
       </div>
       <div className="contact-cards">
         {Object.entries(callMeData).map(([type, info]) => (
@@ -56,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Contact;

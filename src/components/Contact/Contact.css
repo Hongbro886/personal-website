@@ -1,11 +1,11 @@
-.about-section {
-  min-height: 100vh;
+.contact-section {
+  height: 100vh;
   background: #ffffff;
   position: relative;
   overflow: hidden;
 }
 
-.grid-background {
+.contact-section .grid-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,30 +17,30 @@
   pointer-events: auto;
 }
 
-.grid-cell {
+.contact-section .grid-cell {
   aspect-ratio: 1;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
 }
 
-.grid-cell.hovered {
+.contact-section .grid-cell.hovered {
   background-color: rgba(173, 216, 230, 0.4);
 }
 
-.about-container {
+.contact-container {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 0.382fr 0.618fr;
-  min-height: 100vh;
+  height: 100vh;
   padding: 4rem;
   gap: 4rem;
   pointer-events: none;
 }
 
-.about-left {
+.contact-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,19 +48,28 @@
   padding-right: 2rem;
 }
 
-.about-label {
+.contact-label {
   font-size: 1rem;
   color: #94a3b8;
   font-family: 'SF Mono', monospace;
   margin-bottom: 1rem;
 }
 
-.about-title {
+.contact-title {
   font-size: 4rem;
   font-weight: 700;
   color: #818cf8;
   line-height: 1.1;
   margin-bottom: 3rem;
+}
+
+.contact-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #334155;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .contact-card {
@@ -102,30 +111,22 @@
   top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-}
-
-.about-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #334155;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  z-index: 3;
 }
 
 @media (max-width: 768px) {
-  .about-container {
+  .contact-container {
     grid-template-columns: 1fr;
     padding: 2rem;
     gap: 2rem;
   }
 
-  .about-left,
-  .about-right {
+  .contact-left,
+  .contact-right {
     padding-top: 2rem;
   }
 
-  .about-title {
+  .contact-title {
     font-size: 3rem;
   }
 }
