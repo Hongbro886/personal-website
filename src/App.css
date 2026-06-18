@@ -3,6 +3,13 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  background: #ffffff;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
 }
 
 main {
