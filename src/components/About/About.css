@@ -60,15 +60,54 @@
   font-weight: 700;
   color: #818cf8;
   line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  min-width: 140px;
+}
+
+.contact-card.hovered {
+  background-color: rgba(173, 216, 230, 0.4);
+  border-color: rgba(173, 216, 230, 0.6);
+}
+
+.card-type {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.card-name {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 400;
 }
 
 .about-right {
   display: flex;
-  align-items: flex-start;
-  padding-top: 25vh;
+  align-items: center;
+  justify-content: flex-start;
   color: #334155;
   font-size: 1.1rem;
   line-height: 1.8;
+  pointer-events: auto;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-left: 38.2%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {

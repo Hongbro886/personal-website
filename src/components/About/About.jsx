@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import callMeData from '../../CallMe.json';
 import './About.css';
 
 const About = () => {
   const [hoveredCell, setHoveredCell] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const gridCols = 24;
   const gridRows = 20;
@@ -33,7 +35,22 @@ const About = () => {
           <h2 className="about-title">关于</h2>
         </div>
         <div className="about-right">
-          <p>在这里添加关于你的内容</p>
+          <div className="contact-cards">
+            {Object.entries(callMeData).map(([type, info]) => (
+              <a
+                key={type}
+                href={info.where}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`contact-card ${hoveredCard === type ? 'hovered' : ''}`}
+                onMouseEnter={() => setHoveredCard(type)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                <span className="card-type">{type}</span>
+                <span className="card-name">@{info.name}</span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
