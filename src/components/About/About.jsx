@@ -34,24 +34,23 @@ const About = () => {
           <span className="about-label">/ About</span>
           <h2 className="about-title">关于</h2>
         </div>
-        <div className="about-right">
-          <div className="contact-cards">
-            {Object.entries(callMeData).map(([type, info]) => (
-              <a
-                key={type}
-                href={info.where}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`contact-card ${hoveredCard === type ? 'hovered' : ''}`}
-                onMouseEnter={() => setHoveredCard(type)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                <span className="card-type">{type}</span>
-                <span className="card-name">@{info.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
+        <div className="about-right"></div>
+      </div>
+      <div className="contact-cards">
+        {Object.entries(callMeData).map(([type, info]) => (
+          <a
+            key={type}
+            href={info.where}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`contact-card ${hoveredCard === type ? 'hovered' : ''}`}
+            onMouseEnter={() => setHoveredCard(type)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            <span className="card-type">{type}</span>
+            <span className="card-name">@{info.name}</span>
+          </a>
+        ))}
       </div>
     </section>
   );
