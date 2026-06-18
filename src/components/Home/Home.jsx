@@ -1,8 +1,40 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import './Home.css';
 
 const Home = () => {
   const [hoveredCell, setHoveredCell] = useState(null);
+
+  const grade = useMemo(() => {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth() + 1;
+    const currentDay = now.getDate();
+
+    const schoolYear = currentMonth >= 9 ? currentYear : currentYear - 1;
+    const yearInSchool = schoolYear - 2018;
+
+    const gradeNames = [
+      '小学一年级', '小学二年级', '小学三年级', '小学四年级', '小学五年级', '小学六年级',
+      '初一', '初二', '初三',
+      '高一', '高二', '高三',
+      '大一', '大二', '大三', '大四'
+    ];
+
+    const isSummerBreak = (currentMonth === 7 && currentDay >= 1) ||
+                          currentMonth === 8 ||
+                          (currentMonth === 9 && currentDay === 1);
+
+    if (yearInSchool < 0) return '还没上小学呢';
+    if (yearInSchool >= 16) return '毕业了';
+
+    if (isSummerBreak && yearInSchool + 1 < gradeNames.length) {
+      const current = gradeNames[yearInSchool].replace('小学', '').replace('大', '');
+      const next = gradeNames[yearInSchool + 1].replace('小学', '').replace('大', '');
+      return `${current}升${next}，暑假开心捏！`;
+    }
+
+    return gradeNames[yearInSchool];
+  }, []);
 
   const gridCols = 24;
   const gridRows = 20;
@@ -30,9 +62,21 @@ const Home = () => {
       <div className="home-container">
         <div className="home-left">
           <span className="home-label">/ About</span>
-          <h2 className="home-title">关于</h2>
+          <h1 className="home-name">Hongbro886</h1>
         </div>
-        <div className="home-right"></div>
+        <div className="home-right">
+          <ul className="home-intro">
+            <li>我是一名{grade}的学生</li>
+            <li>我在江苏苏州</li>
+            <li>我是一只INFJ</li>
+            <li>喜欢捣鼓计算机，编程，OIer</li>
+            <li>火车迷，交通爱好者</li>
+            <li>周杰伦，ChiliChill乐迷</li>
+            <li>喜欢地理这门有趣的学科</li>
+            <li>常玩的游戏：Minecraft，Palworld</li>
+            <li>品味过以下神作：Outer Wilds，双人成行，黑神话：悟空</li>
+          </ul>
+        </div>
       </div>
     </section>
   );
