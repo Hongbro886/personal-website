@@ -1,11 +1,11 @@
-.home-section {
+.stack-section {
   height: 100vh;
   background: #ffffff;
   position: relative;
   overflow: hidden;
 }
 
-.grid-background {
+.stack-section .grid-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,17 +17,17 @@
   pointer-events: auto;
 }
 
-.grid-cell {
+.stack-section .grid-cell {
   aspect-ratio: 1;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
 }
 
-.grid-cell.hovered {
+.stack-section .grid-cell.hovered {
   background-color: rgba(173, 216, 230, 0.4);
 }
 
-.home-left {
+.stack-left {
   position: absolute;
   left: calc(4 / 30 * 100%);
   top: 25vh;
@@ -35,68 +35,74 @@
   pointer-events: none;
 }
 
-.home-label {
+.stack-label {
   font-size: 1rem;
   color: #94a3b8;
   font-family: 'SF Mono', monospace;
   margin-bottom: 1rem;
 }
 
-.home-title {
+.stack-title {
   font-size: 4rem;
   font-weight: 700;
   color: #818cf8;
   line-height: 1.1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 3rem;
 }
 
-.home-name {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1e293b;
-  line-height: 1.1;
-}
-
-.home-right {
+.stack-right {
   position: absolute;
   left: calc(12 / 30 * 100%);
   top: 25vh;
   z-index: 2;
   pointer-events: none;
-  color: #334155;
-  font-size: 1.1rem;
-  line-height: 2;
 }
 
-.home-intro {
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 4rem;
+}
+
+.stack-group {
+  min-width: 180px;
+}
+
+.stack-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #818cf8;
+  margin-bottom: 0.75rem;
+  font-family: 'SF Mono', monospace;
+}
+
+.stack-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.home-intro li {
-  position: relative;
-  padding-left: 1.2rem;
-}
-
-.home-intro li::before {
-  content: '·';
-  position: absolute;
-  left: 0;
-  color: #818cf8;
-  font-weight: bold;
+.stack-item {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {
-  .home-left {
+  .stack-left {
     left: 2rem;
   }
 
-  .home-right {
+  .stack-right {
     left: 2rem;
     top: 45vh;
   }
 
-  .home-name {
+  .stack-title {
     font-size: 3rem;
+  }
+
+  .stack-grid {
+    grid-template-columns: 1fr;
   }
 }

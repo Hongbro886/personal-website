@@ -1,11 +1,13 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Home from './components/Home/Home'
+import Stack from './components/Stack/Stack'
 import Contact from './components/Contact/Contact'
 import './App.css'
 
 const pages = [
   { id: 'home', component: Home },
+  { id: 'stack', component: Stack },
   { id: 'contact', component: Contact },
 ]
 

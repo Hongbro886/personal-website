@@ -29,12 +29,9 @@ const Contact = () => {
       <div className="grid-background">
         {cells}
       </div>
-      <div className="contact-container">
-        <div className="contact-left">
-          <span className="contact-label">/ Contact</span>
-          <h2 className="contact-title">联系我</h2>
-        </div>
-        <div className="contact-right"></div>
+      <div className="contact-left">
+        <span className="contact-label">/ Contact</span>
+        <h2 className="contact-title">联系我</h2>
       </div>
       <div className="contact-cards">
         {Object.entries(callMeData).map(([type, info]) => (

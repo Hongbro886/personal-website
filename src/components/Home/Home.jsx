@@ -59,27 +59,26 @@ const Home = () => {
       <div className="grid-background">
         {cells}
       </div>
-      <div className="home-container">
-        <div className="home-left">
-          <span className="home-label">/ About</span>
-          <h1 className="home-name">Hongbro886</h1>
-        </div>
-        <div className="home-right">
-          <ul className="home-intro">
-            <li>一名{grade}的学生</li>
-            <li>江苏 苏州</li>
-            <li>一只 INFJ</li>
-            <li>喜欢捣鼓计算机，编程，OIer</li>
-            <li>火车迷，交通爱好者，独自旅行爱好者</li>
-            <li>周杰伦，ChiliChill乐迷</li>
-            <li>喜欢地理这门有趣的学科</li>
-            <li>常玩的游戏：Minecraft，Palworld</li>
-            <li>品味过以下神作：Outer Wilds，双人成行，黑神话：悟空</li>
-            <li>随机现充刷新在各种有趣活动现场</li>
-            <li>SECTL 人事组、网站组成员，SECTL Community 群管理员</li>
-            <li>欢迎交流、合作，以及来玩</li>
-          </ul>
-        </div>
+      <div className="home-left">
+        <span className="home-label">/ About</span>
+        <h1 className="home-title">关于我</h1>
+        <h2 className="home-name">Hongbro886</h2>
+      </div>
+      <div className="home-right">
+        <ul className="home-intro">
+          <li>一名{grade}的学生</li>
+          <li>江苏 苏州</li>
+          <li>一只 INFJ</li>
+          <li>喜欢捣鼓计算机，编程，OIer</li>
+          <li>火车迷，交通爱好者，独自旅行爱好者</li>
+          <li>周杰伦，ChiliChill乐迷</li>
+          <li>喜欢地理这门有趣的学科</li>
+          <li>常玩的游戏：Minecraft，Palworld</li>
+          <li>品味过以下神作：Outer Wilds，双人成行，黑神话：悟空</li>
+          <li>随机现充刷新在各种有趣活动现场</li>
+          <li>SECTL 人事组、网站组成员，SECTL Community 群管理员</li>
+          <li>欢迎交流、合作，以及来玩</li>
+        </ul>
       </div>
     </section>
   );
