@@ -1,0 +1,123 @@
+.friends-section {
+  height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.friends-section .grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-auto-rows: 1fr;
+  pointer-events: auto;
+}
+
+.friends-section .grid-cell {
+  aspect-ratio: 1;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.friends-section .grid-cell.hovered {
+  background-color: rgba(173, 216, 230, 0.4);
+}
+
+.friends-left {
+  position: absolute;
+  left: calc(4 / 30 * 100%);
+  top: 25vh;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.friends-label {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-family: 'SF Mono', monospace;
+  margin-bottom: 1rem;
+}
+
+.friends-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #818cf8;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.friends-cards {
+  display: flex;
+  gap: 0.75rem;
+  position: absolute;
+  left: calc(12 / 30 * 100%);
+  right: 0;
+  top: 25vh;
+  z-index: 3;
+  pointer-events: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-right: 2rem;
+}
+
+.friends-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.friend-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 180px;
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.friend-card.hovered {
+  background-color: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.friend-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.friend-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .friends-left {
+    left: 2rem;
+  }
+
+  .friends-cards {
+    left: 2rem;
+    right: auto;
+    top: 45vh;
+    flex-direction: column;
+    overflow-x: visible;
+    padding-right: 0;
+  }
+
+  .friend-card {
+    width: 100%;
+  }
+
+  .friends-title {
+    font-size: 3rem;
+  }
+}

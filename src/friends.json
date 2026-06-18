@@ -1,0 +1,22 @@
+{
+  "ExampleSite": {
+    "name": "SECTL",
+    "desc": "开发简洁实用的工具，赋能教育及更多领域。",
+    "url": "https://sectl.cn/"
+  },
+  "AnotherBlog": {
+    "name": "黎泽懿_Aionflux",
+    "desc": "Aionflux",
+    "url": "https://aionflux.cn/"
+  },
+  "a": {
+    "name":"jiangyin14 的 Blog",
+    "desc":"让好的教学应用，来到每间课堂。",
+    "url":"https://blog.jiangyin14.top/"
+  },
+  "b": {
+    "name":"apanzinc",
+    "desc":"我是 apanzinc，一名初三学生，专注于前后端开发与人工智能应用的学习与实践。",
+    "url":"https://apanzinc.top"
+  }
+}
