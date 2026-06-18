@@ -24,9 +24,9 @@ function App() {
     const handleWheel = (e) => {
       if (isTransitioning) return
 
-      if (e.deltaY > 30) {
+      if (e.deltaY > 15) {
         goToPage(currentPage + 1)
-      } else if (e.deltaY < -30) {
+      } else if (e.deltaY < -15) {
         goToPage(currentPage - 1)
       }
     }
@@ -54,7 +54,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.35, ease: 'easeInOut' }}
+            transition={{ duration: 0.30, ease: 'easeInOut' }}
           >
             <CurrentComponent />
           </motion.div>
