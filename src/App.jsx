@@ -62,6 +62,12 @@ function App() {
   useEffect(() => {
     const handleWheel = (e) => {
       if (Math.abs(e.deltaY) < 3) return
+      const scrollable = e.target.closest?.('.friends-cards')
+      if (scrollable) {
+        const canScrollDown = e.deltaY > 0 && scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1
+        const canScrollUp = e.deltaY < 0 && scrollable.scrollTop > 0
+        if (canScrollDown || canScrollUp) return
+      }
       if (Date.now() - lastChangeTimeRef.current < 800) return
 
       const page = currentPageRef.current
