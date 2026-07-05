@@ -99,6 +99,7 @@ const Home = () => {
           <li>品味过以下神作：Outer Wilds，双人成行，黑神话：悟空</li>
           <li>随机现充刷新在各种有趣活动现场</li>
           <li>SECTL 人事组、网站组成员，SECTL Community 群管理员</li>
+          <li>CZ 工作室 编程部负责人</li>
           <li>欢迎交流、合作，以及来玩</li>
         </ul>
       </div>
