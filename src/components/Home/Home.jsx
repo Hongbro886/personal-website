@@ -92,14 +92,14 @@ const Home = () => {
           <li>江苏 苏州</li>
           <li>一只 INFJ</li>
           <li>喜欢捣鼓计算机，编程，OIer</li>
-          <li>火车迷，交通爱好者，独自旅行爱好者</li>
+          <li>火车迷，交通爱好者，独自旅行，CTF爱好者</li>
           <li>周杰伦，ChiliChill乐迷</li>
           <li>喜欢地理这门有趣的学科</li>
           <li>常玩的游戏：Minecraft，Palworld</li>
           <li>游戏经历：Outer Wilds，双人成行，黑神话：悟空</li>
           <li>随机现充刷新在各种有趣活动现场</li>
           <li>SECTL 人事组、网站组成员，SECTL Community 群管理员</li>
-          <li>CZ 工作室 编程部负责人</li>
+          <li>Ship It Hackathon ! Go! Go! Go!</li>
           <li>欢迎交流、合作，以及来玩</li>
         </ul>
       </div>
